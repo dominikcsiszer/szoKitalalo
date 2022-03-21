@@ -1,6 +1,6 @@
 # szoKitalalo
-
-Furkó Norbert(frkdigp), Csiszér Alex Dominik(dominikcsiszer)
+### Csapattagok
+Furkó Norbert(frkdigo), Csiszér Alex Dominik(dominikcsiszer)
 
 ## Feladat
 Kettő betűs szó kitalálása, minimum hármat kell a programba építeni. 
