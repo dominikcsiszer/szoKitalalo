@@ -25,7 +25,7 @@ public class SzoKitalalo {
                     
         return valasz;
     }
-
+        
     private static void eldontes(String[] szavak, String betu) {
         //vagy nincs benne betű
         //vagy van benne csak rossz helyen találta el
@@ -43,7 +43,10 @@ public class SzoKitalalo {
             talalat = i < szavak.length;
             if(talalat) {
                 //Jó helyen van-e az a betű
-                System.out.println("van1");
+                i = 0;
+                while (i < szavak.length && !(szavak[i].charAt(1) == betu.charAt(1)))
+                    i++;
+                talalat = i < szavak.length;
             } else {
                 //Második karakter jó-e
                 i = 0;
@@ -52,9 +55,12 @@ public class SzoKitalalo {
                 talalat = i < szavak.length;
                 if (talalat) {
                     //Jó helyen van-e az a betú
-                    System.out.println("van2");
+                    i = 0;
+                    while (i < szavak.length && !(szavak[i].charAt(1) == betu.charAt(1)))
+                        i++;
+                    talalat = i < szavak.length;
                 } else {
-                    System.out.println("Nincs találat");
+                    System.out.println("Nincs találat!");
                 }    
             }
         } else
