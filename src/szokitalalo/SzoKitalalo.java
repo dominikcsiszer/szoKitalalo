@@ -7,7 +7,7 @@ public class SzoKitalalo {
     public static void main(String[] args) {       
         String szavak[] = {"őz", "íz", "ez", "zs"};
         String valasz = beker();
-        betuEllenorzes(karakterSzetbontas(valasz)); // a karakterSzetbontas n. eleme kell
+        betuEllenorzes(karakterSzetbontas(valasz)[0]); // a karakterSzetbontas n. eleme kell
         helyEllenorzes(valasz); // a karakterSzetbontas n. eleme kell
         eldontes();
     }
@@ -35,11 +35,10 @@ public class SzoKitalalo {
         return karakterek;
     }
 
-    private static Integer betuEllenorzes(char[] betu) {
+    private static Integer betuEllenorzes(char betu) {
         // Megnézi, hogy van e egyezés
         // return van benne vagy nincs
-        // Négy féle kimenet van és ezeket számmal jelöljük
-        
+        // Három féle kimenet van és ezeket számmal jelöljük
         return 1;
     }
 
