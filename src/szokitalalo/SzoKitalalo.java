@@ -38,15 +38,25 @@ public class SzoKitalalo {
         if(!talalat) {
             //Eltalált-e egy betűt
             i = 0;
-            while (i < szavak.length && !(szavak[i].charAt(0) == betu.charAt(0)))
+            while (i < szavak.length && !(szavak[i].charAt(0) == betu.charAt(0)) && !(szavak[i].charAt(1) == betu.charAt(0)))
                 i++;
             talalat = i < szavak.length;
             if(talalat) {
                 //Jó helyen van-e az a betű
-                
-            } else
+                System.out.println("van1");
+            } else {
                 //Második karakter jó-e
-                
+                i = 0;
+                while (i < szavak.length && !(szavak[i].charAt(0) == betu.charAt(1)) && !(szavak[i].charAt(1) == betu.charAt(1)))
+                    i++;
+                talalat = i < szavak.length;
+                if (talalat) {
+                    //Jó helyen van-e az a betú
+                    System.out.println("van2");
+                } else {
+                    System.out.println("Nincs találat");
+                }    
+            }
         } else
             System.out.println("Eltaláltál egy szót!");
     }
