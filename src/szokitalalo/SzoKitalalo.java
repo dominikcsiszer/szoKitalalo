@@ -7,8 +7,7 @@ public class SzoKitalalo {
     public static void main(String[] args) {       
         String szavak[] = {"őz", "íz", "ez", "zs"};
         String valasz = beker();
-        karakterSzetbontas(valasz);
-        betuEllenorzes(valasz); // a karakterSzetbontas n. eleme kell
+        betuEllenorzes(karakterSzetbontas(valasz)); // a karakterSzetbontas n. eleme kell
         helyEllenorzes(valasz); // a karakterSzetbontas n. eleme kell
         eldontes();
     }
@@ -28,19 +27,25 @@ public class SzoKitalalo {
         return valasz;
     }
     
-    private static void karakterSzetbontas(String valasz) {
-        
+    private static char[] karakterSzetbontas(String valasz) {
+        char karakterek[] = {'a', 'a'};
+        for (int i = 0; i < valasz.length(); i++)
+            karakterek[i] = valasz.charAt(i);
+       
+        return karakterek;
     }
 
-    private static boolean betuEllenorzes(String betu) {
+    private static Integer betuEllenorzes(char[] betu) {
         // Megnézi, hogy van e egyezés
         // return van benne vagy nincs
-        return false;
+        // Négy féle kimenet van és ezeket számmal jelöljük
+        
+        return 1;
     }
 
-    private static boolean helyEllenorzes(String betu) {
+    private static Integer helyEllenorzes(String betu) {
         //return a helyén van a betű vagy sem
-        return false;
+        return 1;
     }
 
     private static void eldontes() {
