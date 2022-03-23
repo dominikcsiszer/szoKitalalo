@@ -7,9 +7,8 @@ public class SzoKitalalo {
     public static void main(String[] args) {       
         String szavak[] = {"őz", "íz", "ez", "zs"};
         String valasz = beker();
-        betuEllenorzes(karakterSzetbontas(valasz)); // a karakterSzetbontas n. eleme kell
-        helyEllenorzes(valasz); // a karakterSzetbontas n. eleme kell
-        eldontes();
+        
+        eldontes(szavak, valasz);
     }
 
     private static String beker() {
@@ -26,32 +25,29 @@ public class SzoKitalalo {
                     
         return valasz;
     }
-    
-    private static char[] karakterSzetbontas(String valasz) {
-        char karakterek[] = {'a', 'a'};
-        for (int i = 0; i < valasz.length(); i++)
-            karakterek[i] = valasz.charAt(i);
-       
-        return karakterek;
-    }
 
-    private static Integer betuEllenorzes(char[] betu) {
-        // Megnézi, hogy van e egyezés
-        // return van benne vagy nincs
-        // Négy féle kimenet van és ezeket számmal jelöljük
-        
-        return 1;
-    }
-
-    private static Integer helyEllenorzes(String betu) {
-        //return a helyén van a betű vagy sem
-        return 1;
-    }
-
-    private static void eldontes() {
+    private static void eldontes(String[] szavak, String betu) {
         //vagy nincs benne betű
         //vagy van benne csak rossz helyen találta el
         //vagy eltalálta a betűt és a helyet is
         //vagy az egészet eltalálta
+        int i = 0;
+        while (i < szavak.length && !(szavak[i] == betu))
+            i++;
+        boolean talalat = i < szavak.length;
+        if(!talalat) {
+            //Eltalált-e egy betűt
+            i = 0;
+            while (i < szavak.length && !(szavak[i].charAt(0) == betu.charAt(0)))
+                i++;
+            talalat = i < szavak.length;
+            if(talalat) {
+                //Jó helyen van-e az a betű
+                
+            } else
+                //Második karakter jó-e
+                
+        } else
+            System.out.println("Eltaláltál egy szót!");
     }
 }
