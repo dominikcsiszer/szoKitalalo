@@ -9,5 +9,5 @@ Ha a betűt eltalálta mondja el:
 - vagy van benne csak rossz helyen találta el
 - vagy eltalálta a betűt és a helyet is
 
- - [ ] Kezdőlap
- - [x] Cikkek
+ - [ ] ❌Kezdőlap
+ - [x] ✔ Cikkek
